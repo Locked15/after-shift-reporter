@@ -13,6 +13,7 @@ const blankPatient = (): Patient => ({
 export const fallbackConfig: ReporterConfig = {
     hospitalName: 'ГБУЗ РБ ГКБ №5 г. Уфа',
     doctorName: '',
+    fileName: 'Дежурство',
     shiftBeginning: { dayOffset: -1, time: '18:00' },
     shiftEnding: { dayOffset: 0, time: '08:00' },
     patients: [blankPatient()],
@@ -40,7 +41,8 @@ function normalizeConfig(value: unknown): ReporterConfig | null {
     const raw = value as Partial<ReporterConfig>
     if (
         typeof raw.hospitalName !== 'string' ||
-        typeof raw.doctorName !== 'string'
+        typeof raw.doctorName !== 'string' ||
+        typeof raw.fileName !== 'string'
     )
         return null
     if (
@@ -58,6 +60,7 @@ function normalizeConfig(value: unknown): ReporterConfig | null {
     return {
         hospitalName: raw.hospitalName,
         doctorName: raw.doctorName,
+        fileName: raw.fileName,
         shiftBeginning: raw.shiftBeginning,
         shiftEnding: raw.shiftEnding,
         patients: Array.isArray(raw.patients)

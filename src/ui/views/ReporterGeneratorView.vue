@@ -10,6 +10,7 @@ import type { Patient } from '@/types'
 
 const hospitalName = ref('')
 const doctorName = ref('')
+const fileName = ref('')
 const beginning = ref('')
 const ending = ref('')
 const patients = ref<Patient[]>([])
@@ -58,6 +59,7 @@ async function submit() {
         await generateReport({
             hospitalName: hospitalName.value,
             doctorName: doctorName.value,
+            fileName: fileName.value,
             beginning: beginning.value,
             ending: ending.value,
             patients: patients.value,
@@ -76,6 +78,7 @@ onMounted(async () => {
     const loaded = await loadConfig()
     hospitalName.value = loaded.config.hospitalName
     doctorName.value = loaded.config.doctorName
+    fileName.value = loaded.config.fileName
     beginning.value = configuredDate(
         loaded.config.shiftBeginning.dayOffset,
         loaded.config.shiftBeginning.time,
@@ -141,6 +144,12 @@ onMounted(async () => {
                         @remove="removePatient(index)"
                     />
                 </div>
+            </section>
+            <section class="form-section">
+                <h2>Параметры генерации</h2>
+                <label
+                    >Имя файла<input v-model="fileName" type="text" />
+                </label>
             </section>
             <p v-if="error" class="notice notice--error" role="alert">
                 {{ error }}

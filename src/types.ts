@@ -10,6 +10,7 @@ export interface Patient {
 export interface ReporterConfig {
     hospitalName: string
     doctorName: string
+    fileName: string
     shiftBeginning: { dayOffset: number; time: string }
     shiftEnding: { dayOffset: number; time: string }
     patients: Patient[]

@@ -6,7 +6,7 @@ defineEmits<{ help: [] }>()
     <header class="app-header">
         <div>
             <p class="app-header__eyebrow">Смена закрыта</p>
-            <h1>Reporter Generator</h1>
+            <h1>Генератор отчётности</h1>
         </div>
         <button class="help-button" type="button" @click="$emit('help')">
             Нужна помощь?

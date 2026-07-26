@@ -54,6 +54,7 @@ function patientBlock(patients: Patient[]): string {
 export async function generateReport(data: {
     hospitalName: string
     doctorName: string
+    fileName: string
     beginning: string
     ending: string
     patients: Patient[]
@@ -83,7 +84,7 @@ export async function generateReport(data: {
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
-    link.download = `after-shift-report-${data.beginning.slice(0, 10)}.docx`
+    link.download = `${data.fileName.trim() || 'Дежурство'}.docx`
     link.click()
     URL.revokeObjectURL(url)
 }

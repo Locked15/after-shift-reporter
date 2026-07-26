@@ -1,5 +1,6 @@
 hospitalName: 'ГБУЗ РБ ГКБ №5 г. Уфа'
 doctorName: ''
+fileName: 'Дежурство'
 shiftBeginning:
     dayOffset: -1
     time: '18:00'
