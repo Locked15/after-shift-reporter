@@ -1,6 +1,7 @@
 FROM node:current AS build
 WORKDIR /app
 COPY package*.json ./
+RUN npm i
 RUN npm ci
 COPY . .
 RUN npm run build
