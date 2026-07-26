@@ -17,7 +17,7 @@ npm run build
 
 ## Defaults
 
-Edit `config/config.yml`. It controls hospital, doctor, shift day offsets/times, and initial patient cards. `dayOffset: -1` means yesterday; `0` means today. App fetches this file at startup. Missing or invalid YAML falls back to built-in defaults and shows warning.
+Edit `public/config.yml`. It controls hospital, doctor, shift day offsets/times, and initial patient cards. `dayOffset: -1` means yesterday; `0` means today. App fetches this file at startup. Missing or invalid YAML falls back to built-in defaults and shows warning.
 
 ## Docker
 
@@ -25,7 +25,7 @@ Edit `config/config.yml`. It controls hospital, doctor, shift day offsets/times,
 docker compose up --build
 ```
 
-Open `http://localhost:8080`. Compose mounts `./config/config.yml` read-only into container, so deployment defaults can change without rebuilding image.
+Open `http://localhost:8080`. Compose mounts `./public/config.yml` read-only into container, so deployment defaults can change without rebuilding image.
 
 ## Document output
 

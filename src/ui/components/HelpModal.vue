@@ -34,7 +34,7 @@
             </ol>
             <p>
                 Значения по умолчанию редактируются в
-                <code>config/config.yml</code>. В Docker подключите файл томом.
+                <code>public/config.yml</code>. В Docker подключите файл томом.
             </p>
         </section>
     </div>
