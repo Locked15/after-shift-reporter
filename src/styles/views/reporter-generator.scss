@@ -1,0 +1,75 @@
+.generator-view {
+    width: min(100% - 2rem, 62rem);
+    margin: 0 auto;
+    padding-bottom: 3rem;
+}
+.report-form,
+.form-section,
+.patient-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-section {
+    padding: clamp(1rem, 4vw, 1.6rem);
+    border: 1px solid #61594e;
+    border-radius: 1rem;
+    background: rgb(20 18 16 / 78%);
+}
+.form-section h2 {
+    margin: 0;
+    color: #ffcb5c;
+}
+.date-fields,
+.section-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+.section-heading {
+    justify-content: space-between;
+}
+.secondary-button {
+    padding: 0.7rem 1rem;
+    color: #2c1b04;
+    background: #ffbd36;
+}
+.generate-button {
+    width: 100%;
+    padding: 1.05rem;
+    color: #1e1507;
+    background: linear-gradient(110deg, #f47a1f, #ffde45);
+    font-size: 1.15rem;
+}
+.generate-button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+.notice {
+    margin: 0 0 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.7rem;
+}
+.notice--warning {
+    border: 1px solid #c98b26;
+    color: #ffe2a0;
+    background: #493111;
+}
+.notice--error {
+    border: 1px solid #d75d4a;
+    color: #ffd0c8;
+    background: #4a1f1b;
+}
+@media (max-width: 540px) {
+    .generator-view {
+        width: min(100% - 1rem, 62rem);
+    }
+    .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .secondary-button {
+        width: 100%;
+    }
+}

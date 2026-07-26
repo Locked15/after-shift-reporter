@@ -1,0 +1,34 @@
+.patient-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid #655b50;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #24211f, #181716);
+}
+.patient-card__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem;
+}
+.patient-card h3 {
+    margin: 0;
+    color: #ffcc5b;
+}
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.35rem;
+    min-height: 2.35rem;
+    border: 1px solid #a38b60;
+    border-radius: 0.6rem;
+    color: #ffe6ab;
+    background: #302b26;
+    font-size: 1.1rem;
+}
+.icon-button:hover {
+    background: #5c321c;
+}

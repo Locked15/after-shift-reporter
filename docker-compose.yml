@@ -1,0 +1,7 @@
+services:
+    after-shift-reporter:
+        build: .
+        ports:
+            - '8080:80'
+        volumes:
+            - ./config/config.yml:/usr/share/nginx/html/config.yml:ro

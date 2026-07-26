@@ -1,0 +1,48 @@
+:root {
+    font-family: Inter, Arial, sans-serif;
+    color: #f8f5ef;
+    background: #111;
+    font-synthesis: none;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(145deg, #111 0%, #292522 48%, #5b3510 100%);
+}
+button,
+input,
+textarea {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #6b6258;
+    border-radius: 0.65rem;
+    padding: 0.7rem 0.8rem;
+    color: #fff;
+    background: #211f1d;
+}
+textarea {
+    resize: vertical;
+}
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.42rem;
+    color: #f6ce7d;
+    font-weight: 650;
+}
+input:focus,
+textarea:focus,
+button:focus-visible {
+    outline: 3px solid #ffc437;
+    outline-offset: 2px;
+}
