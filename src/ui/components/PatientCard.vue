@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Patient } from '@/types'
+    import type { Patient } from '@/types'
 
-defineProps<{ index: number }>()
-const patient = defineModel<Patient>({ required: true })
-defineEmits<{ remove: [] }>()
+    defineProps<{ index: number }>()
+    const patient = defineModel<Patient>({ required: true })
+    defineEmits<{ remove: [] }>()
 </script>
 
 <template>

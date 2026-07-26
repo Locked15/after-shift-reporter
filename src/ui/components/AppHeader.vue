@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineEmits<{ help: [] }>()
+    defineEmits<{ help: [] }>()
 </script>
 
 <template>
